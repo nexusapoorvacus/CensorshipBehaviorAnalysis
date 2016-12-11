@@ -165,10 +165,9 @@ t = threading.Thread(target=run_sniffer)
 t.daemon = True
 t.start()
 
-ip = "52.42.171.245"
+server_ip = "52.42.171.245"
 basic_request = "GET / HTTP/1.1Host: www.espn.com"
-#firstPartLen = basic_request.index("Host:")
-minstring(ip, basic_request)
+minstring(server_ip, basic_request)
 
 # Ctrl-C Handler
 signal.signal(signal.SIGINT, signal_handler)
